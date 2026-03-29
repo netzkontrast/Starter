@@ -1,3 +1,6 @@
 {
-  "hooks": {}
+  "hooks": {},
+  "enabledPlugins": {
+    "github@claude-code-marketplace": true
+  }
 }
