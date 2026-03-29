@@ -1,3 +1,14 @@
 {
-  "hooks": {}
+  "hooks": {},
+  "enabledPlugins": {
+    "github@claude-code-marketplace": true
+  },
+  "extraKnownMarketplaces": {
+    "token-optimizer": {
+      "source": {
+        "source": "github",
+        "repo": "alexgreensh/token-optimizer"
+      }
+    }
+  }
 }
