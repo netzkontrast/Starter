@@ -27,3 +27,32 @@ All changes should be developed on `claude/init-project-setup-a74Sx` and pushed 
 ```
 git push -u origin claude/init-project-setup-a74Sx
 ```
+
+## Agent Memory System
+
+### Before Working
+- Read this file for global context
+- Check `.memory/decisions.md` before architectural changes
+- Check `.memory/patterns.md` before implementing common functionality
+- Check if audit is due: if 14+ days or 10+ sessions since last audit in `.memory/audit-log.md`, suggest running one
+
+### During Work
+- Create CLAUDE.md in any new directory you create
+
+### After Work
+- Update relevant CLAUDE.md if conventions changed
+- Log decisions to `.memory/decisions.md` (ADR format: status, decision, context, alternatives, consequences)
+- Log patterns to `.memory/patterns.md`
+- Uncertain inferences → `.memory/inbox.md` (never canonical files)
+
+### Safety
+- Never record secrets, API keys, or user data
+- Never overwrite decisions — mark as [superseded]
+- Never promote from inbox without user confirmation
+
+### Commands
+- `ham status` — Check memory system health
+- `ham insights` — Generate actionable improvements
+- `ham savings` — View token/cost savings report
+- `ham audit` — Full health check
+- `ham remove` — Safely disable HAM if needed
