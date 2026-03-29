@@ -37,3 +37,26 @@ Because rtk heavily truncates standard output (especially on test or build failu
 ## 5. Fetching Web/Log Data
 - **Logs:** Run `rtk log <file>` to automatically deduplicate repetitive log lines and aggregate errors by count.
 - **Web:** Run `rtk curl <url>` to download payloads while automatically stripping progress bars, HTML noise, or safely parsing JSON schemas.
+
+## Agent Memory System
+
+### Before Working
+- Read this file for global context, then read the target directory's CLAUDE.md before changes
+- If this file has a ## Context Routing section, use it to find the right subdirectory CLAUDE.md
+- Check .memory/decisions.md before architectural changes
+- Check .memory/patterns.md before implementing common functionality
+- Check if audit is due: if 14+ days or 10+ sessions since last audit in .memory/audit-log.md, suggest running one
+
+### During Work
+- Create CLAUDE.md in any new directory you create
+
+### After Work
+- Update relevant CLAUDE.md if conventions changed
+- Log decisions to .memory/decisions.md (ADR format)
+- Log patterns to .memory/patterns.md
+- Uncertain inferences → .memory/inbox.md (never canonical files)
+
+### Safety
+- Never record secrets, API keys, or user data
+- Never overwrite decisions — mark as [superseded]
+- Never promote from inbox without user confirmation
